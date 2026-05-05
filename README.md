@@ -8,7 +8,7 @@ A mobile-first app for managing your LinkedIn post queue. No code required after
 
 ### Step 1 — Copy the Google Sheet template
 
-Make a copy of the [post template sheet](#) *(link to be added)* into your own Google Drive.
+Make a copy of the [post template sheet](https://docs.google.com/spreadsheets/d/1eWBchk3SOGvCaxiH2MSJFNqmkSZkSgFh/copy) into your own Google Drive.
 
 Your sheet needs these column headers in row 1 — exact spelling, lowercase:
 
