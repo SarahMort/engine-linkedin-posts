@@ -670,6 +670,9 @@
   }
 
   function getCSVUrl(input) {
+    // Already a published-to-web CSV URL — use as-is
+    if (input.includes('docs.google.com') && input.includes('/pub') && input.includes('output=csv')) return input;
+    // Regular edit/share URL — construct export URL
     const match = input.match(/\/spreadsheets\/d\/([a-zA-Z0-9-_]+)/);
     if (!match) return null;
     const id = match[1];
