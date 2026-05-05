@@ -1090,8 +1090,9 @@
       .then(r => { if (!r.ok) throw new Error(); return r.text(); })
       .then(text => render(csvToData(text), cfg))
       .catch(() => {
-        document.getElementById('app').innerHTML =
-          '<div class="empty-state"><strong>Could not load your sheet.</strong>Check the URL in settings or make sure it\'s published to the web.</div>';
+        const app = document.getElementById('app');
+        app.innerHTML = '<div class="empty-state"><strong>Could not load your sheet.</strong>Check the URL in settings or make sure it\'s published to the web.<br><br><button id="errorSettingsBtn" style="margin-top:8px;padding:10px 20px;background:var(--text);color:var(--bg);border:none;border-radius:8px;font-size:13px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;cursor:pointer;font-family:inherit;">Update Settings</button></div>';
+        document.getElementById('errorSettingsBtn').addEventListener('click', () => showSetup(true));
       });
   }
 
